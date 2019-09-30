@@ -27,7 +27,15 @@ class DashboardPresenter {
     }
     
     public func getAlbums(){
-    
+        api.getAlbums(onError: { (error) in
+            self.dashboardView?.showError(error: error)
+        }) { (status, response) in
+            if let albums = Album.getAlbums(jsonArray: response) {
+                self.dashboardView?.updateAlbums(albums: albums)
+            }else{
+                self.dashboardView?.showError(error: "parse error")
+            }
+        }
     }
 }
 

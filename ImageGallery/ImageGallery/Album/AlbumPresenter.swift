@@ -27,7 +27,15 @@ class AlbumPresenter {
     }
     
     public func getPhotos(album:Album){
-        
+        api.getPhotos(AlbumId: album.id ?? 0, onError: { (error) in
+            self.albumView?.showError(error: error)
+        }) { (status, response) in
+            if let photos = Photo.getPhotos(jsonArray: response) {
+                self.albumView?.updatePhotos(photos: photos)
+            }else{
+                self.albumView?.showError(error: "parse error")
+            }
+        }
     }
 }
 

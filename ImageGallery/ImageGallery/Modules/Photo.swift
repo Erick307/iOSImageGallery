@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Photo {
+struct Photo : Codable {
     
     var albumId:Int?
     var id:Int?
@@ -16,4 +16,24 @@ struct Photo {
     var url:String?
     var thumbnailUrl:String?
 
+    init(json:Data) {
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            self = try decoder.decode(Photo.self, from: json)
+        }catch{
+            print("TA parse error")
+        }
+    }
+    
+    static func getPhotos(jsonArray : Data) -> [Photo]?{
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let array = try decoder.decode([Photo].self, from: jsonArray)
+            return array
+        }catch{
+            return nil
+        }
+    }
 }
