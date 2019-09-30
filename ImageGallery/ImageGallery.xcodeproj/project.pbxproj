@@ -18,6 +18,8 @@
 		CCA643372342805000A36C9A /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA643362342805000A36C9A /* DashboardVC.swift */; };
 		CCA643392342805D00A36C9A /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA643382342805D00A36C9A /* DashboardPresenter.swift */; };
 		CCA6434023428B5400A36C9A /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA6433F23428B5400A36C9A /* AlbumCell.swift */; };
+		CCA6434223428E8C00A36C9A /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA6434123428E8C00A36C9A /* PhotoCell.swift */; };
+		CCA6434423428EC400A36C9A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA6434323428EC400A36C9A /* ImageView.swift */; };
 		FEEBCA45A76A8DF41528212A /* Pods_ImageGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E25D1B8BA179B60ACECFA15 /* Pods_ImageGallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		CCA643362342805000A36C9A /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		CCA643382342805D00A36C9A /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		CCA6433F23428B5400A36C9A /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		CCA6434123428E8C00A36C9A /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		CCA6434323428EC400A36C9A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		CCA6432923427FD400A36C9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CCA6434323428EC400A36C9A /* ImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			children = (
 				CCA643322342803500A36C9A /* AlbumVC.swift */,
 				CCA643342342804100A36C9A /* AlbumPresenter.swift */,
+				CCA6434123428E8C00A36C9A /* PhotoCell.swift */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -273,8 +279,10 @@
 				CCA6431623427EB500A36C9A /* AppDelegate.swift in Sources */,
 				CCA6432D2342801300A36C9A /* RestApi.swift in Sources */,
 				CCA6432F2342801F00A36C9A /* Album.swift in Sources */,
+				CCA6434423428EC400A36C9A /* ImageView.swift in Sources */,
 				CCA643392342805D00A36C9A /* DashboardPresenter.swift in Sources */,
 				CCA643372342805000A36C9A /* DashboardVC.swift in Sources */,
+				CCA6434223428E8C00A36C9A /* PhotoCell.swift in Sources */,
 				CCA643312342802700A36C9A /* Photo.swift in Sources */,
 				CCA643352342804100A36C9A /* AlbumPresenter.swift in Sources */,
 				CCA6434023428B5400A36C9A /* AlbumCell.swift in Sources */,
