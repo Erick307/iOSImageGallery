@@ -61,8 +61,11 @@ class AlbumVC: UIViewController {
         }
     }
 
-    func photoSelected(){
-        
+    func photoSelected( index: Int){
+        if let ps = photos {
+            let vc = PhotoGalleryVC.getViewController(photos: ps,index: index)
+            present(vc, animated: true)
+        }
     }
 
     func setupView(){
@@ -92,8 +95,8 @@ extension AlbumVC : UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let p = photos?[indexPath.row] {
-            photoSelected()
+        if let _ = photos?[indexPath.row] {
+            photoSelected(index: indexPath.row)
         }
     }
 }
